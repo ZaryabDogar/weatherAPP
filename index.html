@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="output.css" />
+		<title>Weather APP</title>
+	</head>
+	<body class="flex justify-center items-center h-[100vh] font-mono bg-black">
+		<main
+			class="sm:w-[40vw] backdrop-blur-sm bg-white/70 rounded-sm shadow-lg shadow-white"
+		>
+			<div class="sm:flex rounded-md overflow-hidden">
+				<input
+					type="text"
+					name=""
+					id="input"
+					placeholder="Place"
+					class="outline-none w-1/3 my-3 mx-3 bg-white/40 hover:cursor-pointer rounded-md overflow-hidden sm:w-32 placeholder:text-sm text-sm"
+				/>
+                <button id="get" class="bg-white/70 sm:w-10 my-3 rounded-lg outline-none hover:bg-white/10">GET</button>
+			</div>
+
+			<p
+				id="detail"
+				class="mx-3 flex justify-center sm:text-xl my-5 hidden text-sm"
+			>
+				Please check your internet connection
+			</p>
+			<p id="load" class="sm:mx-5 mx-2 text-sm flex justify-center"></p>
+			<div class="my-3" id="down">
+				<div class="flex items-center">
+					<img
+						src="https://openweathermap.org/img/wn/50d.png"
+						id="icon"
+						alt="icon"
+					/>
+					<p id="temp" class="sm:text-5xl text-lg">--</p>
+					<span class="block text-red-900">°C&nbsp;</span>
+					<p id="desc" class="sm:text-xl text-sm items-baseline">&nbsp;__</p>
+				</div>
+				<div class="mx-5 flex-col h-auto sm:text-lg text-sm">
+					<div class="flex"><p id="feellike" >Feel Like:&nbsp;</p><span class="text-red-900">°C</span></div>
+					<div class="flex"><p id="hm" >Humidity:&nbsp;</p><span class="text-red-900">%</span></div>
+					<div class="flex"><p id="ws" >Wind Speed:&nbsp;</p><span class="text-red-900">m/s</span></div>
+				</div>
+                			<div class=" mx-3 sm:block ">
+                <p  class="" style="font-size: 13px;">Sunrise: <span id="sunrise">__</span></p>
+                <p  class=""  style="font-size: 13px;">Sunset: <span id="sunset">__</span></p>
+            </div>
+			</div>
+            <p id="date" class="flex justify-center text-sm mx-3"></p>
+		</main>
+		<script src="/index.js"></script>
+	</body>
+</html>
